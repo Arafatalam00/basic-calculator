@@ -12,14 +12,14 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: #333; /* Dark background */
         }
 
         .calculator {
-            background: #fff;
+            background: #444; /* Darker gray for calculator background */
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             text-align: center;
             width: 90%;
             max-width: 350px;
@@ -35,6 +35,8 @@
             padding: 0 10px;
             font-size: 18px;
             box-sizing: border-box;
+            background-color: #222; /* Dark background for display */
+            color: #fff; /* White text for display */
         }
 
         .buttons {
@@ -48,30 +50,30 @@
             font-size: 18px;
             border: none;
             border-radius: 5px;
-            background: #007BFF;
+            background: #555; /* Gray buttons */
             color: white;
             cursor: pointer;
             transition: background 0.3s;
         }
 
         .buttons button:hover {
-            background: #0056b3;
+            background: #666; /* Lighter gray on hover */
         }
 
         .buttons .equal {
-            background: #28a745;
+            background: #28a745; /* Green for equal button */
         }
 
         .buttons .equal:hover {
-            background: #1e7e34;
+            background: #1e7e34; /* Darker green on hover */
         }
 
         .buttons .clear {
-            background: #dc3545;
+            background: #dc3545; /* Red for clear button */
         }
 
         .buttons .clear:hover {
-            background: #bd2130;
+            background: #bd2130; /* Darker red on hover */
         }
 
         @media (max-width: 480px) {
@@ -136,15 +138,15 @@
 
     <script>
         const display = document.getElementById('display');
-
+    
         function appendValue(value) {
             display.value += value;
         }
-
+    
         function clearDisplay() {
             display.value = '';
         }
-
+    
         function calculate() {
             try {
                 display.value = eval(display.value);
@@ -154,5 +156,3 @@
             }
         }
     </script>
-</body>
-</html>
